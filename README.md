@@ -2,9 +2,9 @@
 SC2002 Project - "Restaurant Rush" 
 A turn-based, command-line restaurant management game written in Java.
 
-> **Project status:** In development
-> **Group:** SCEF Grp 3 
-> **Team members:** BAJPAI KASHVI, SINHA AYATI, THIO ZHONG PING, HAROLD LEE JING RUI
+> **Project status:** In development \
+> **Group:** SCEF Grp 3 \
+> **Team members:** BAJPAI KASHVI, SINHA AYATI, THIO ZHONG PING, HAROLD LEE JING RUI \
 
 ## 1. Project overview
 
