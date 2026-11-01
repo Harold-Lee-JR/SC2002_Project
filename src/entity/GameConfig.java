@@ -1,8 +1,8 @@
 package entity;
 
 /**
- * Fixed rules of the base setting (see assignment Section 2.1).
- * Immutable: all values are set once and only exposed through getters.
+ * Fixed rules of the base setting 
+ * so all values are set once and only exposed through getters.
  */
 public class GameConfig {
     private final int maxTurns = 18;
@@ -36,7 +36,7 @@ public class GameConfig {
         return victorySatisfaction;
     }
 
-    /** True if a customer is scheduled to arrive at the start of the given turn. */
+    /** True if a customer is scheduled to arrive at start of the given turn. */
     public boolean isArrivalTurn(int turn) {
         if (turn < FIRST_ARRIVAL_TURN) {
             return false;
