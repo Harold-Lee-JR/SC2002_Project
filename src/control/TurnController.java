@@ -34,6 +34,7 @@ public class TurnController {
     private final Waiter waiter;
     private final Chef chef;
     private final Cashier cashier;
+    private final CustomerFactory customerFactory;
 
     private int nextCustomerId = 1;
 
@@ -45,6 +46,7 @@ public class TurnController {
         this.waiter = new Waiter(restaurant);
         this.chef = new Chef();
         this.cashier = new Cashier();
+        this.customerFactory = new CustomerFactory();
     }
 
     public void executeTurn(int turn) {
@@ -70,7 +72,7 @@ public class TurnController {
 
     private void processArrivals(int turn) {
         if (config.isArrivalTurn(turn)) {
-            Customer c = new Customer(nextCustomerId++);
+            Customer c = customerFactory.createCustomer(nextCustomerId++);
             restaurant.getWaitingQueue().enqueue(c);
             ui.displayMessage(c + " arrives and joins the waiting queue.");
         }

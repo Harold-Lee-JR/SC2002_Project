@@ -1,0 +1,327 @@
+  - Welcome to Restaurant Rush! You are the manager. Play 18 turns, then see whether you win.
+  - Customer #1 arrives and joins the waiting queue.
+
+==================== TURN 1 / 18 ====================
+Revenue: $0.00 | Avg satisfaction (paid): N/A | Paid: 0 | Served: 0 | Left unhappy: 0
+Waiting queue:
+  Customer #1 - satisfaction 100
+Tables:
+  Table 1: free
+  Table 2: free
+
+  1) Waiter: seat Customer #1 (satisfaction 100) at Table 1
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: seat Customer #1 (satisfaction 100) at Table 1
+  - Customer #1 is seated at Table 1.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+
+==================== TURN 2 / 18 ====================
+Revenue: $0.00 | Avg satisfaction (paid): N/A | Paid: 0 | Served: 0 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: Customer #1 [SEATED, satisfaction 92]
+  Table 2: free
+
+  1) Waiter: take order from Customer #1 at Table 1 (satisfaction 92)
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: take order from Customer #1 at Table 1 (satisfaction 92)
+  - Customer #1 orders Salad ($9.00, 1 prep unit(s)).
+
+  1) Chef: cook Salad for Customer #1 at Table 1 (1 unit(s) left)
+  2) Chef: wait (do nothing this turn)
+Your choice [1-2]: > Chef: cook Salad for Customer #1 at Table 1 (1 unit(s) left)
+  - Salad for Customer #1 is READY (it can be served from next turn).
+
+==================== TURN 3 / 18 ====================
+Revenue: $0.00 | Avg satisfaction (paid): N/A | Paid: 0 | Served: 0 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: Customer #1 [ORDERED, satisfaction 84] | Order: Salad $9.00 - READY
+  Table 2: free
+
+  1) Waiter: serve Salad (READY) to Customer #1 at Table 1
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: serve Salad (READY) to Customer #1 at Table 1
+  - Salad served to Customer #1. They start eating.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+  - VIP Customer #2 arrives and joins the waiting queue.
+
+==================== TURN 4 / 18 ====================
+Revenue: $0.00 | Avg satisfaction (paid): N/A | Paid: 0 | Served: 1 | Left unhappy: 0
+Waiting queue:
+  VIP Customer #2 - satisfaction 100
+Tables:
+  Table 1: Customer #1 [EATING, satisfaction 84] | Order: Salad $9.00 - SERVED
+  Table 2: free
+
+  1) Waiter: seat VIP Customer #2 (satisfaction 100) at Table 2
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: seat VIP Customer #2 (satisfaction 100) at Table 2
+  - VIP Customer #2 is seated at Table 2.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+  - Customer #1 finished eating and is ready to pay.
+
+==================== TURN 5 / 18 ====================
+Revenue: $0.00 | Avg satisfaction (paid): N/A | Paid: 0 | Served: 1 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: Customer #1 [READY_TO_PAY, satisfaction 84] | Order: Salad $9.00 - SERVED
+  Table 2: VIP Customer #2 [SEATED, satisfaction 95]
+
+  1) Waiter: take order from VIP Customer #2 at Table 2 (satisfaction 95)
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: take order from VIP Customer #2 at Table 2 (satisfaction 95)
+  - VIP Customer #2 orders Burger ($13.50, 1 prep unit(s)).
+
+  1) Chef: cook Burger for VIP Customer #2 at Table 2 (1 unit(s) left)
+  2) Chef: wait (do nothing this turn)
+Your choice [1-2]: > Chef: cook Burger for VIP Customer #2 at Table 2 (1 unit(s) left)
+  - Burger for VIP Customer #2 is READY (it can be served from next turn).
+  - Customer #1 pays $9.00 (satisfaction 84 recorded). Table 1 is free.
+
+==================== TURN 6 / 18 ====================
+Revenue: $9.00 | Avg satisfaction (paid): 84.0 | Paid: 1 | Served: 1 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: free
+  Table 2: VIP Customer #2 [ORDERED, satisfaction 90] | Order: Burger $13.50 - READY
+
+  1) Waiter: serve Burger (READY) to VIP Customer #2 at Table 2
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: serve Burger (READY) to VIP Customer #2 at Table 2
+  - Burger served to VIP Customer #2. They start eating.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+  - Customer #3 arrives and joins the waiting queue.
+
+==================== TURN 7 / 18 ====================
+Revenue: $9.00 | Avg satisfaction (paid): 84.0 | Paid: 1 | Served: 2 | Left unhappy: 0
+Waiting queue:
+  Customer #3 - satisfaction 100
+Tables:
+  Table 1: free
+  Table 2: VIP Customer #2 [EATING, satisfaction 90] | Order: Burger $13.50 - SERVED
+
+  1) Waiter: seat Customer #3 (satisfaction 100) at Table 1
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: seat Customer #3 (satisfaction 100) at Table 1
+  - Customer #3 is seated at Table 1.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+  - VIP Customer #2 finished eating and is ready to pay.
+
+==================== TURN 8 / 18 ====================
+Revenue: $9.00 | Avg satisfaction (paid): 84.0 | Paid: 1 | Served: 2 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: Customer #3 [SEATED, satisfaction 92]
+  Table 2: VIP Customer #2 [READY_TO_PAY, satisfaction 90] | Order: Burger $13.50 - SERVED
+
+  1) Waiter: take order from Customer #3 at Table 1 (satisfaction 92)
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: take order from Customer #3 at Table 1 (satisfaction 92)
+  - Customer #3 orders Pasta ($18.00, 2 prep unit(s)).
+
+  1) Chef: cook Pasta for Customer #3 at Table 1 (2 unit(s) left)
+  2) Chef: wait (do nothing this turn)
+Your choice [1-2]: > Chef: cook Pasta for Customer #3 at Table 1 (2 unit(s) left)
+  - Chef cooked one unit of Pasta for Customer #3 (1 unit(s) left).
+  - VIP Customer #2 pays $13.50 (satisfaction 90 recorded). Table 2 is free.
+
+==================== TURN 9 / 18 ====================
+Revenue: $22.50 | Avg satisfaction (paid): 87.0 | Paid: 2 | Served: 2 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: Customer #3 [ORDERED, satisfaction 84] | Order: Pasta $18.00 - PREPARING (1 unit(s) left)
+  Table 2: free
+
+  1) Waiter: wait (do nothing this turn)
+Your choice [1-1]: > Waiter: wait (do nothing this turn)
+
+  1) Chef: cook Pasta for Customer #3 at Table 1 (1 unit(s) left)
+  2) Chef: wait (do nothing this turn)
+Your choice [1-2]: > Chef: cook Pasta for Customer #3 at Table 1 (1 unit(s) left)
+  - Pasta for Customer #3 is READY (it can be served from next turn).
+  - Critic #4 arrives and joins the waiting queue.
+
+==================== TURN 10 / 18 ====================
+Revenue: $22.50 | Avg satisfaction (paid): 87.0 | Paid: 2 | Served: 2 | Left unhappy: 0
+Waiting queue:
+  Critic #4 - satisfaction 100
+Tables:
+  Table 1: Customer #3 [ORDERED, satisfaction 76] | Order: Pasta $18.00 - READY
+  Table 2: free
+
+  1) Waiter: seat Critic #4 (satisfaction 100) at Table 2
+  2) Waiter: serve Pasta (READY) to Customer #3 at Table 1
+  3) Waiter: wait (do nothing this turn)
+Your choice [1-3]: > Waiter: serve Pasta (READY) to Customer #3 at Table 1
+  - Pasta served to Customer #3. They start eating.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+
+==================== TURN 11 / 18 ====================
+Revenue: $22.50 | Avg satisfaction (paid): 87.0 | Paid: 2 | Served: 3 | Left unhappy: 0
+Waiting queue:
+  Critic #4 - satisfaction 88
+Tables:
+  Table 1: Customer #3 [EATING, satisfaction 76] | Order: Pasta $18.00 - SERVED
+  Table 2: free
+
+  1) Waiter: seat Critic #4 (satisfaction 88) at Table 2
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: seat Critic #4 (satisfaction 88) at Table 2
+  - Critic #4 is seated at Table 2.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+  - Customer #3 finished eating and is ready to pay.
+
+==================== TURN 12 / 18 ====================
+Revenue: $22.50 | Avg satisfaction (paid): 87.0 | Paid: 2 | Served: 3 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: Customer #3 [READY_TO_PAY, satisfaction 76] | Order: Pasta $18.00 - SERVED
+  Table 2: Critic #4 [SEATED, satisfaction 76]
+
+  1) Waiter: take order from Critic #4 at Table 2 (satisfaction 76)
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: take order from Critic #4 at Table 2 (satisfaction 76)
+  - Critic #4 orders Pasta ($18.00, 2 prep unit(s)).
+
+  1) Chef: cook Pasta for Critic #4 at Table 2 (2 unit(s) left)
+  2) Chef: wait (do nothing this turn)
+Your choice [1-2]: > Chef: cook Pasta for Critic #4 at Table 2 (2 unit(s) left)
+  - Chef cooked one unit of Pasta for Critic #4 (1 unit(s) left).
+  - Customer #3 pays $18.00 (satisfaction 76 recorded). Table 1 is free.
+  - Customer #5 arrives and joins the waiting queue.
+
+==================== TURN 13 / 18 ====================
+Revenue: $40.50 | Avg satisfaction (paid): 83.3 | Paid: 3 | Served: 3 | Left unhappy: 0
+Waiting queue:
+  Customer #5 - satisfaction 100
+Tables:
+  Table 1: free
+  Table 2: Critic #4 [ORDERED, satisfaction 64] | Order: Pasta $18.00 - PREPARING (1 unit(s) left)
+
+  1) Waiter: seat Customer #5 (satisfaction 100) at Table 1
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: wait (do nothing this turn)
+
+  1) Chef: cook Pasta for Critic #4 at Table 2 (1 unit(s) left)
+  2) Chef: wait (do nothing this turn)
+Your choice [1-2]: > Chef: cook Pasta for Critic #4 at Table 2 (1 unit(s) left)
+  - Pasta for Critic #4 is READY (it can be served from next turn).
+
+==================== TURN 14 / 18 ====================
+Revenue: $40.50 | Avg satisfaction (paid): 83.3 | Paid: 3 | Served: 3 | Left unhappy: 0
+Waiting queue:
+  Customer #5 - satisfaction 92
+Tables:
+  Table 1: free
+  Table 2: Critic #4 [ORDERED, satisfaction 52] | Order: Pasta $18.00 - READY
+
+  1) Waiter: seat Customer #5 (satisfaction 92) at Table 1
+  2) Waiter: serve Pasta (READY) to Critic #4 at Table 2
+  3) Waiter: wait (do nothing this turn)
+Your choice [1-3]: > Waiter: seat Customer #5 (satisfaction 92) at Table 1
+  - Customer #5 is seated at Table 1.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+
+==================== TURN 15 / 18 ====================
+Revenue: $40.50 | Avg satisfaction (paid): 83.3 | Paid: 3 | Served: 3 | Left unhappy: 0
+Waiting queue:
+  (empty)
+Tables:
+  Table 1: Customer #5 [SEATED, satisfaction 84]
+  Table 2: Critic #4 [ORDERED, satisfaction 40] | Order: Pasta $18.00 - READY
+
+  1) Waiter: take order from Customer #5 at Table 1 (satisfaction 84)
+  2) Waiter: serve Pasta (READY) to Critic #4 at Table 2
+  3) Waiter: wait (do nothing this turn)
+Your choice [1-3]: > Waiter: take order from Customer #5 at Table 1 (satisfaction 84)
+  - Customer #5 orders Burger ($15.00, 1 prep unit(s)).
+
+  1) Chef: cook Burger for Customer #5 at Table 1 (1 unit(s) left)
+  2) Chef: wait (do nothing this turn)
+Your choice [1-2]: > Chef: cook Burger for Customer #5 at Table 1 (1 unit(s) left)
+  - Burger for Customer #5 is READY (it can be served from next turn).
+  - Customer #6 arrives and joins the waiting queue.
+
+==================== TURN 16 / 18 ====================
+Revenue: $40.50 | Avg satisfaction (paid): 83.3 | Paid: 3 | Served: 3 | Left unhappy: 0
+Waiting queue:
+  Customer #6 - satisfaction 100
+Tables:
+  Table 1: Customer #5 [ORDERED, satisfaction 76] | Order: Burger $15.00 - READY
+  Table 2: Critic #4 [ORDERED, satisfaction 28] | Order: Pasta $18.00 - READY
+
+  1) Waiter: serve Burger (READY) to Customer #5 at Table 1
+  2) Waiter: serve Pasta (READY) to Critic #4 at Table 2
+  3) Waiter: wait (do nothing this turn)
+Your choice [1-3]: > Waiter: serve Pasta (READY) to Critic #4 at Table 2
+  - Pasta served to Critic #4. They start eating.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+
+==================== TURN 17 / 18 ====================
+Revenue: $40.50 | Avg satisfaction (paid): 83.3 | Paid: 3 | Served: 4 | Left unhappy: 0
+Waiting queue:
+  Customer #6 - satisfaction 92
+Tables:
+  Table 1: Customer #5 [ORDERED, satisfaction 68] | Order: Burger $15.00 - READY
+  Table 2: Critic #4 [EATING, satisfaction 28] | Order: Pasta $18.00 - SERVED
+
+  1) Waiter: serve Burger (READY) to Customer #5 at Table 1
+  2) Waiter: wait (do nothing this turn)
+Your choice [1-2]: > Waiter: serve Burger (READY) to Customer #5 at Table 1
+  - Burger served to Customer #5. They start eating.
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+  - Critic #4 finished eating and is ready to pay.
+
+==================== TURN 18 / 18 ====================
+Revenue: $40.50 | Avg satisfaction (paid): 83.3 | Paid: 3 | Served: 5 | Left unhappy: 0
+Waiting queue:
+  Customer #6 - satisfaction 84
+Tables:
+  Table 1: Customer #5 [EATING, satisfaction 68] | Order: Burger $15.00 - SERVED
+  Table 2: Critic #4 [READY_TO_PAY, satisfaction 28] | Order: Pasta $18.00 - SERVED
+
+  1) Waiter: wait (do nothing this turn)
+Your choice [1-1]: > Waiter: wait (do nothing this turn)
+
+  1) Chef: wait (do nothing this turn)
+Your choice [1-1]: > Chef: wait (do nothing this turn)
+  - Critic #4 pays $18.00 (satisfaction 28 recorded). Table 2 is free.
+  - Customer #5 finished eating and is ready to pay.
+
+==================== GAME OVER ====================
+Turns used:                 18
+Customers served:           5
+Customers paid:             4   (target >= 4)
+Unhappy departures:         0
+Revenue:                    $58.50   (target >= $45.00)
+Avg satisfaction (paid):    69.5   (target >= 60)
+
+Outcome: VICTORY

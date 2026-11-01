@@ -3,10 +3,9 @@ package entity;
 import java.util.List;
 
 /**
- * A restaurant customer (Stage 1: every customer is a Regular).
- * Behaviour that may differ between customer types (satisfaction loss, food choice)
- * is exposed as methods so that later stages can override it in subclasses
- * without touching the controllers.
+ * A Regular restaurant customer, and the base class for every other customer type.
+ * Behaviour that differs between types (satisfaction loss, food choice, bill, label)
+ * is exposed as methods that subclasses override, so the controllers never check the type.
  */
 public class Customer {
     private static final int STARTING_SATISFACTION = 100;
@@ -41,6 +40,16 @@ public class Customer {
      */
     public MenuItem chooseMenuItem(List<MenuItem> menu) {
         return menu.get((id - 1) % menu.size());
+    }
+
+    /** The amount this customer is charged for an item, locked into the Order when it is taken. Regular = full price. */
+    public double calculateBill(MenuItem item) {
+        return item.getPrice();
+    }
+
+    /** Name shown in messages, e.g. "Customer #1" or "VIP Customer #2". */
+    protected String getTypeLabel() {
+        return "Customer";
     }
 
     /** Marks the customer as served: eating starts and the serving turn is remembered. */
@@ -86,6 +95,6 @@ public class Customer {
 
     @Override
     public String toString() {
-        return "Customer #" + id;
+        return getTypeLabel() + " #" + id;
     }
 }

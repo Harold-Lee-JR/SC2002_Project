@@ -16,7 +16,7 @@ public class Order {
     public Order(Customer customer, MenuItem item) {
         this.customer = customer;
         this.item = item;
-        this.price = item.getPrice();
+        this.price = customer.calculateBill(item);
         this.preparationRemaining = item.getPrepUnit();
         this.status = OrderStatus.PREPARING; // default state when an order is created
         this.turnReady = -1;
