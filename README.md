@@ -72,3 +72,34 @@ Stage 1/
       Order  OrderStatus (enum)  MenuItem
       Decision                   one option the manager can pick (built by the controller, shown by the UI)
 ```
+
+## Stage 1 -> Stage 2: customer behaviour extension
+
+**New files**
+- `Stage2/SRC/entity/VIPCustomer.java`: a type of Customer. Loses 5 satisfaction for each turn they wait and gets 10% off their bill.
+- `Stage2/SRC/entity/CriticCustomer.java`: a type of Customer. Loses 12 satisfaction for each turn they wait and pays full price. We chose to make the Critic always order the most expensive item on the menu (if two items cost the same, the first one listed). With our menu that is Pasta, which takes 2 preparation units, so the Critic is harder to serve quickly.
+- `Stage2/SRC/control/CustomerFactory.java`: decides what type each arriving customer is. Customers still arrive on turns 1, 4, 7, 10, 13 and 16, in this order: Regular, VIP, Regular, Critic, Regular, Regular. The order is fixed so every run can be repeated.
+- `Stage2/victory.txt`, `Stage2/defeat.txt`: the inputs we used for our test runs, with the outputs saved next to them.
+
+**Money now stored in cents**
+The original Stage 1 implementation used `double` because its prices were whole-dollar amounts. In Stage 2 the VIP discount creates prices like $13.50, and the brief says that once fractional prices come up, money should be kept as integer cents and shown in dollars with two decimals. So before adding the new customers, we copied Stage 1 into Stage 2 and changed the money to `int` cents (Salad 900, Burger 1500, Pasta 1800):
+- `MenuItem.java`, `Order.java`: prices are `int` cents.
+- `GameConfig.java`: the revenue target is 4500 cents ($45).
+- `GameResult.java`: revenue is added up in cents.
+- `Restaurant.java`: menu prices written in cents.
+- `UserInterface.java`, `TurnController.java`: amounts are turned back into dollars only when printed, e.g. 1350 becomes "$13.50".
+The game plays exactly the same as Stage 1 after this change; the Stage 1 victory script still ends in VICTORY.
+
+**Existing files we changed**
+- `Customer.java`: added `calculateBill(MenuItem)`, which returns the full price for a regular customer, and `getTypeLabel()`, which gives the name shown in messages. The subclasses override these. `toString()` now uses `getTypeLabel()`, but regular customers still show up as "Customer #1" like before.
+- `Order.java` (again): the order's price now comes from `customer.calculateBill(item)` instead of `item.getPrice()`. This way each customer type works out its own bill, and the price is still fixed once the order is taken.
+- `TurnController.java`: new customers are now created by `CustomerFactory` instead of `new Customer(...)`. This is the only change. The rest of the turn works the same and never checks what type of customer it is dealing with.
+- `Main.java`: updated the comment to say Stage 2.
+
+**What still works**
+- Regular customers behave the same as in Stage 1 (lose 8 per turn, pay full price, same food choice).
+- The win and lose conditions, the six arrivals and the order of steps in each turn are unchanged.
+- Our victory run ends in VICTORY with 4 customers paid, $58.50 revenue and an average satisfaction of 69.5. Our defeat run ends in DEFEAT. Both runs include the VIP (#2) and the Critic (#4).
+
+**Effect on the design**
+In Stage 1 we had already put the behaviour that differs between customers, like satisfaction loss and food choice, into methods in Customer. For Stage 2 we only had to add VIPCustomer and CriticCustomer and override those methods, so the controllers never need to check the customer type. This means a new customer type can be added as a new class without editing the turn logic (open/closed principle). CustomerFactory is the only class that refers to VIPCustomer and CriticCustomer by name, when customers are created.
